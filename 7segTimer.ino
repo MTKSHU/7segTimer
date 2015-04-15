@@ -14,11 +14,23 @@ int latch = P1_2
 /*
 General info regarding the pinout/etc
 
-Binary Val: 128  64  32  16   8   4   2   1
+Binary Val: 128  64  32  16   8   4   2  +1
 595 Pins:   QH   QG  QF  QE   QD  QC  QB  QA
 Segments:   B    C   A   F    G   D   E   N/C
- 
-Digits: (hex) (dec)
+
+How display segments correlate with A/B/C etc:
+   
+------- <-A
+|     |
+| F   | B
+|     |
+------- <-G
+|     |
+| E   | C
+|     |
+------- <-D
+
+Digits: binary (hex) (dec (eventually))
 	0 = 0b11110110 (0xF6)
 	1 = 0b11000000 (0xF0)
 	2 = 0b10101110 (0xAE)
@@ -36,7 +48,8 @@ Digits: (hex) (dec)
 	E = 0b00111110 (0x3E)
 	F = 0b00111010 (0x3A)
 	*= same as 6, 6 needs a hat?
-	+= 1/QA is always low 
+	   6 w/ hat is 0b01111110
+	+= 1/QA is useused. Leave low.
 */
 
 // make an array so it's not a pain to work with	
