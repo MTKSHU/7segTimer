@@ -14,6 +14,12 @@ This code is intended to be used to drive four seven-segment displays in a manne
 
 The 8th pin of each shift register will not be used, and can be pulled to ground or left floating. Otherwise, connect it as the data sheet specifies. Only three pins from the MCU are required - data, clock, and latch. In my configuration I use the shift registers to drive darlington pair ICs (ULQ2004AN) which are then driving 7 segment numitron tubes. The darlington pairs are used to provide high current, as numitron tubes can pull as much as 150mA when all elements are lit. High current shift registers do exist and can be used here in a more direct fashion.
 
+## ToDo
+- Add support for using buttons to set hours & miuntes
+- Add support for the DS1307 RTC
+- Add support for using a GPS to set the time, likely with TinyGPS++
+
+
 ## Licensing
 
 Licensed under the Apache License, Version 2.0 (the "License");
