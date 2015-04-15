@@ -1,8 +1,12 @@
 # 7segTimer
 A simple application for Arduino or MSP430 (via Energia) to drive four 7-segment displays through standard 8bit shift registers in a timer-like fashion.
+
 ---
+
 This code is very heavily based on lucidtronix's tutorial on using 74HC595 shift registers with an Arduino, found here: http://www.lucidtronix.com/tutorials/40. 
+
 ---
+
 This was created to run on an MSP430 series MCU - be it a G2231 or F5529 and be built by Energia. Due to it's simple nature it should run on anything that the Arduino or Energia software can flash. Additionally it could be used as a learning tool for daisy-chaining shift registers, due to its simple nature.
 
 ## Usage
