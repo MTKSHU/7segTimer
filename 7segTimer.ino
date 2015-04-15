@@ -7,9 +7,9 @@ Idea & bits from http://www.lucidtronix.com/tutorials/40
 */
 
 // specify required pins
-int data = P1_0
-int clock = P1_1
-int latch = P1_2
+int data = P1_0;
+int clock = P1_1;
+int latch = P1_2;
 
 /*
 General info regarding the pinout/etc
@@ -89,10 +89,10 @@ void loop() {
 					// this assumes that the 1-minute register is first.
 					// If not, reverse these shiftOuts.
 					// LSBFIRST mandates that the bits are written lo->hi
-					shiftOut(data, clock, LSBFIRST, digits[minutes];
-					shiftOut(data, clock, LSBFIRST, digits[tenminutes];
-					shiftOut(data, clock, LSBFIRST, digits[hours];
-					shiftOut(data, clock, LSBFIRST, digits[tenhours];
+					shiftOut(data, clock, LSBFIRST, digits[minutes]);
+					shiftOut(data, clock, LSBFIRST, digits[tenminutes]);
+					shiftOut(data, clock, LSBFIRST, digits[hours]);
+					shiftOut(data, clock, LSBFIRST, digits[tenhours]);
 					
 					// latch high to display values
 					digitalWrite(latch, HIGH);
