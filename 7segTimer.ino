@@ -88,11 +88,10 @@ void loop() {
 					// write data to registers
 					// this assumes that the 1-minute register is first.
 					// If not, reverse these shiftOuts.
-					// LSBFIRST mandates that the bits are written lo->hi
-					shiftOut(data, clock, LSBFIRST, digits[minutes]);
-					shiftOut(data, clock, LSBFIRST, digits[tenminutes]);
-					shiftOut(data, clock, LSBFIRST, digits[hours]);
-					shiftOut(data, clock, LSBFIRST, digits[tenhours]);
+					shiftOut(data, clock, MSBFIRST, digits[minutes]);
+					shiftOut(data, clock, MSBFIRST, digits[tenminutes]);
+					shiftOut(data, clock, MSBFIRST, digits[hours]);
+					shiftOut(data, clock, MSBFIRST, digits[tenhours]);
 					
 					// latch high to display values
 					digitalWrite(latch, HIGH);
